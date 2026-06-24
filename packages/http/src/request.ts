@@ -74,7 +74,8 @@ async function parseResponse<T>(
 // 构建请求选项
 function buildOptions(config?: RequestConfig) {
   if (!config) return {}
-  const { schema: _schema, ...options } = config
+  const options = { ...config }
+  delete options.schema
   return options
 }
 
@@ -135,9 +136,11 @@ export function configure(options?: {
   prefixUrl?: string
   timeout?: number
 }): void {
-  if (options?.prefixUrl) defaultConfig.prefix = options.prefixUrl
-  if (options?.timeout) defaultConfig.timeout = options.timeout
-  instance = ky.create(defaultConfig)
+  instance = ky.create({
+    ...defaultConfig,
+    prefix: options?.prefixUrl || defaultConfig.prefix,
+    timeout: options?.timeout || defaultConfig.timeout,
+  })
 }
 
 // 导出
