@@ -21,6 +21,6 @@
     "zod": "catalog:dev"
   },
   "exports": {
-    "./src": "./src/index.js"
+    "./src": "./src/index.ts"
   }
 }
