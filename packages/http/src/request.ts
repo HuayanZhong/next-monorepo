@@ -22,29 +22,32 @@ export interface RequestConfig {
       }
 }
 
+// 默认配置
+const defaultConfig = {
+  prefix: "/api",
+  timeout: 10000,
+  retry: {
+    limit: 2,
+    methods: ["get", "put", "head", "delete", "options", "trace"] as string[],
+    statusCodes: [408, 413, 429, 500, 502, 503, 504] as number[],
+  },
+  hooks: {
+    beforeRequest: [
+      ({ request }: { request: Request }) => {
+        if (typeof window !== "undefined") {
+          const token = localStorage.getItem("token")
+          if (token) {
+            request.headers.set("Authorization", `Bearer ${token}`)
+          }
+        }
+      },
+    ],
+  },
+}
+
 // 创建基础 ky 实例
 const createBaseInstance = () => {
-  return ky.create({
-    prefix: "/api",
-    timeout: 10000,
-    retry: {
-      limit: 2,
-      methods: ["get", "put", "head", "delete", "options", "trace"],
-      statusCodes: [408, 413, 429, 500, 502, 503, 504],
-    },
-    hooks: {
-      beforeRequest: [
-        ({ request }) => {
-          if (typeof window !== "undefined") {
-            const token = localStorage.getItem("token")
-            if (token) {
-              request.headers.set("Authorization", `Bearer ${token}`)
-            }
-          }
-        },
-      ],
-    },
-  })
+  return ky.create(defaultConfig)
 }
 
 // 默认实例
@@ -132,27 +135,9 @@ export function configure(options?: {
   prefixUrl?: string
   timeout?: number
 }): void {
-  instance = ky.create({
-    prefix: options?.prefixUrl || "/api",
-    timeout: options?.timeout || 10000,
-    retry: {
-      limit: 2,
-      methods: ["get", "put", "head", "delete", "options", "trace"],
-      statusCodes: [408, 413, 429, 500, 502, 503, 504],
-    },
-    hooks: {
-      beforeRequest: [
-        ({ request }) => {
-          if (typeof window !== "undefined") {
-            const token = localStorage.getItem("token")
-            if (token) {
-              request.headers.set("Authorization", `Bearer ${token}`)
-            }
-          }
-        },
-      ],
-    },
-  })
+  if (options?.prefixUrl) defaultConfig.prefix = options.prefixUrl
+  if (options?.timeout) defaultConfig.timeout = options.timeout
+  instance = ky.create(defaultConfig)
 }
 
 // 导出
