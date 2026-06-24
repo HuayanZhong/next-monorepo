@@ -3,20 +3,25 @@
   "ui": "tui",
   "tasks": {
     "build": {
+      "description": "Build all apps and packages for production. Runs `next build` in Next.js apps, producing optimized .next output. Depends on upstream package builds (^build). Inputs include source files and .env* files. Outputs: .next/** directory (excluding .next/cache).",
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {
+      "description": "Run ESLint static analysis across all apps and packages. Checks code quality, enforces coding standards, and catches potential bugs. Depends on upstream package linting (^lint).",
       "dependsOn": ["^lint"]
     },
     "format": {
+      "description": "Format all TypeScript and TypeScript React source files using Prettier. Writes formatted output in-place for **/*.{ts,tsx} files across all apps and packages. Depends on upstream package formatting (^format).",
       "dependsOn": ["^format"]
     },
     "typecheck": {
+      "description": "Run TypeScript type checking with `tsc --noEmit` across all apps and packages. Validates type correctness without producing output files. Depends on upstream package typechecks (^typecheck).",
       "dependsOn": ["^typecheck"]
     },
     "dev": {
+      "description": "Start Next.js development server with hot module replacement (HMR). Runs `next dev` in web app. Non-cacheable, persistent long-running process.",
       "cache": false,
       "persistent": true
     }
