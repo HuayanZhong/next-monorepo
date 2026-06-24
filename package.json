@@ -23,7 +23,6 @@
   },
   "lint-staged": {
     "*.{ts,tsx,mts}": [
-      "eslint",
       "prettier --write"
     ]
   },

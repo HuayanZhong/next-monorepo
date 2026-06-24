@@ -3,6 +3,11 @@ packages:
   - "packages/*"
 
 allowBuilds:
+  esbuild: true
+  msw: false
   sharp: true
   unrs-resolver: true
-  msw: false
+catalogs:
+  dev:
+    ky: ^2.0.2
+    zod: ^4.4.3
