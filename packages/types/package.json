@@ -14,11 +14,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.33.4",
   "dependencies": {
-    "@workspace/eslint-config": "workspace:*",
-    "@workspace/typescript-config": "workspace:*",
     "zod": "catalog:dev"
   },
   "devDependencies": {
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "eslint": "catalog:dev",
     "prettier": "catalog:dev",
     "typescript": "catalog:dev"
