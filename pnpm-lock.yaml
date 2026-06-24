@@ -210,6 +210,13 @@ importers:
 
   packages/http:
     dependencies:
+      ky:
+        specifier: catalog:dev
+        version: 2.0.2
+      zod:
+        specifier: catalog:dev
+        version: 4.4.3
+    devDependencies:
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
@@ -219,25 +226,19 @@ importers:
       eslint:
         specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
-      ky:
-        specifier: catalog:dev
-        version: 2.0.2
-      zod:
-        specifier: catalog:dev
-        version: 4.4.3
 
   packages/types:
     dependencies:
+      zod:
+        specifier: catalog:dev
+        version: 4.4.3
+    devDependencies:
       '@workspace/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      zod:
-        specifier: catalog:dev
-        version: 4.4.3
-    devDependencies:
       eslint:
         specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
