@@ -12,23 +12,23 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@hugeicons/core-free-icons": "^4.2.1",
-    "@hugeicons/react": "^1.1.9",
+    "@hugeicons/core-free-icons": "catalog:dev",
+    "@hugeicons/react": "catalog:dev",
     "@workspace/http": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "next": "16.2.6",
-    "next-themes": "^0.4.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "next": "catalog:dev",
+    "next-themes": "catalog:dev",
+    "react": "catalog:dev",
+    "react-dom": "catalog:dev"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@types/react": "catalog:dev",
+    "@types/react-dom": "catalog:dev",
     "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
-    "eslint": "^9",
-    "typescript": "^5"
+    "eslint": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }

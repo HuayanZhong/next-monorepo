@@ -16,7 +16,7 @@
   "dependencies": {
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
-    "eslint": "^9.39.4",
+    "eslint": "catalog:dev",
     "ky": "catalog:dev",
     "zod": "catalog:dev"
   },

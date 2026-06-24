@@ -19,9 +19,9 @@
     "zod": "catalog:dev"
   },
   "devDependencies": {
-    "eslint": "^9",
-    "prettier": "^3.8.4",
-    "typescript": "^5"
+    "eslint": "catalog:dev",
+    "prettier": "catalog:dev",
+    "typescript": "catalog:dev"
   },
   "exports": {
     ".": "./src/index.ts"

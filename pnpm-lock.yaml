@@ -6,9 +6,78 @@ settings:
 
 catalogs:
   dev:
+    '@hugeicons/core-free-icons':
+      specifier: ^4.2.1
+      version: 4.2.1
+    '@hugeicons/react':
+      specifier: ^1.1.9
+      version: 1.1.9
+    '@next/eslint-plugin-next':
+      specifier: ^16.2.6
+      version: 16.2.6
+    '@tailwindcss/postcss':
+      specifier: ^4
+      version: 4.3.0
+    '@turbo/gen':
+      specifier: ^2.9.15
+      version: 2.9.15
+    '@types/node':
+      specifier: ^20
+      version: 20.19.41
+    '@types/react':
+      specifier: ^19
+      version: 19.2.15
+    '@types/react-dom':
+      specifier: ^19
+      version: 19.2.3
+    class-variance-authority:
+      specifier: ^0.7.1
+      version: 0.7.1
+    clsx:
+      specifier: ^2.1.1
+      version: 2.1.1
+    eslint:
+      specifier: ^9
+      version: 9.39.4
+    husky:
+      specifier: ^9.1.7
+      version: 9.1.7
     ky:
       specifier: ^2.0.2
       version: 2.0.2
+    next:
+      specifier: 16.2.6
+      version: 16.2.6
+    next-themes:
+      specifier: ^0.4.6
+      version: 0.4.6
+    prettier:
+      specifier: ^3.8.4
+      version: 3.8.4
+    radix-ui:
+      specifier: ^1.6.0
+      version: 1.6.0
+    react:
+      specifier: 19.2.4
+      version: 19.2.4
+    react-dom:
+      specifier: 19.2.4
+      version: 19.2.4
+    shadcn:
+      specifier: ^4.11.0
+      version: 4.11.0
+    tailwind-merge:
+      specifier: ^3.6.0
+      version: 3.6.0
+    tailwindcss:
+      specifier: ^4
+      version: 4.3.0
+    tw-animate-css:
+      specifier: ^1.4.0
+      version: 1.4.0
+    typescript:
+      specifier: ^5
+      version: 5.9.3
     zod:
       specifier: ^4.4.3
       version: 4.4.3
@@ -24,34 +93,34 @@ importers:
         specifier: workspace:*
         version: link:packages/typescript-config
       husky:
-        specifier: ^9.1.7
+        specifier: catalog:dev
         version: 9.1.7
       lint-staged:
         specifier: ^17.0.8
         version: 17.0.8
       prettier:
-        specifier: ^3.8.4
+        specifier: catalog:dev
         version: 3.8.4
       prettier-plugin-tailwindcss:
         specifier: ^0.8.0
         version: 0.8.0(prettier@3.8.4)
       shadcn:
-        specifier: ^4.11.0
+        specifier: catalog:dev
         version: 4.11.0(typescript@5.9.3)
       turbo:
         specifier: ^2.9.18
         version: 2.9.18
       typescript:
-        specifier: ^5
+        specifier: catalog:dev
         version: 5.9.3
 
   apps/web:
     dependencies:
       '@hugeicons/core-free-icons':
-        specifier: ^4.2.1
+        specifier: catalog:dev
         version: 4.2.1
       '@hugeicons/react':
-        specifier: ^1.1.9
+        specifier: catalog:dev
         version: 1.1.9(react@19.2.4)
       '@workspace/http':
         specifier: workspace:*
@@ -60,29 +129,29 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       next:
-        specifier: 16.2.6
+        specifier: catalog:dev
         version: 16.2.6(@babel/core@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-themes:
-        specifier: ^0.4.6
+        specifier: catalog:dev
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
-        specifier: 19.2.4
+        specifier: catalog:dev
         version: 19.2.4
       react-dom:
-        specifier: 19.2.4
+        specifier: catalog:dev
         version: 19.2.4(react@19.2.4)
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: catalog:dev
         version: 4.3.0
       '@types/node':
-        specifier: ^20
+        specifier: catalog:dev
         version: 20.19.41
       '@types/react':
-        specifier: ^19
+        specifier: catalog:dev
         version: 19.2.15
       '@types/react-dom':
-        specifier: ^19
+        specifier: catalog:dev
         version: 19.2.3(@types/react@19.2.15)
       '@workspace/eslint-config':
         specifier: workspace:^
@@ -91,10 +160,10 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       eslint:
-        specifier: ^9
+        specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
       typescript:
-        specifier: ^5
+        specifier: catalog:dev
         version: 5.9.3
 
   packages/eslint-config:
@@ -103,7 +172,7 @@ importers:
         specifier: ^9
         version: 9.39.4
       '@next/eslint-plugin-next':
-        specifier: ^16.2.6
+        specifier: catalog:dev
         version: 16.2.6
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.60.0
@@ -112,7 +181,7 @@ importers:
         specifier: ^8.60.0
         version: 8.60.0(eslint@9.39.4(jiti@2.7.0))(typescript@5.9.3)
       eslint:
-        specifier: ^9
+        specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
       eslint-config-prettier:
         specifier: ^10.1.8
@@ -133,7 +202,7 @@ importers:
         specifier: ^17.6.0
         version: 17.6.0
       typescript:
-        specifier: ^5
+        specifier: catalog:dev
         version: 5.9.3
       typescript-eslint:
         specifier: ^8.60.0
@@ -148,7 +217,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       eslint:
-        specifier: ^9.39.4
+        specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
       ky:
         specifier: catalog:dev
@@ -170,13 +239,13 @@ importers:
         version: 4.4.3
     devDependencies:
       eslint:
-        specifier: ^9
+        specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
       prettier:
-        specifier: ^3.8.4
+        specifier: catalog:dev
         version: 3.8.4
       typescript:
-        specifier: ^5
+        specifier: catalog:dev
         version: 5.9.3
 
   packages/typescript-config: {}
@@ -184,56 +253,56 @@ importers:
   packages/ui:
     dependencies:
       '@hugeicons/core-free-icons':
-        specifier: ^4.2.1
+        specifier: catalog:dev
         version: 4.2.1
       '@hugeicons/react':
-        specifier: ^1.1.9
+        specifier: catalog:dev
         version: 1.1.9(react@19.2.4)
       class-variance-authority:
-        specifier: ^0.7.1
+        specifier: catalog:dev
         version: 0.7.1
       clsx:
-        specifier: ^2.1.1
+        specifier: catalog:dev
         version: 2.1.1
       next-themes:
-        specifier: ^0.4.6
+        specifier: catalog:dev
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       radix-ui:
-        specifier: ^1.6.0
+        specifier: catalog:dev
         version: 1.6.0(@types/react-dom@19.2.3(@types/react@19.2.15))(@types/react@19.2.15)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react:
-        specifier: 19.2.4
+        specifier: catalog:dev
         version: 19.2.4
       react-dom:
-        specifier: 19.2.4
+        specifier: catalog:dev
         version: 19.2.4(react@19.2.4)
       shadcn:
-        specifier: ^4.11.0
+        specifier: catalog:dev
         version: 4.11.0(typescript@5.9.3)
       tailwind-merge:
-        specifier: ^3.6.0
+        specifier: catalog:dev
         version: 3.6.0
       tw-animate-css:
-        specifier: ^1.4.0
+        specifier: catalog:dev
         version: 1.4.0
       zod:
-        specifier: ^4.4.3
+        specifier: catalog:dev
         version: 4.4.3
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4
+        specifier: catalog:dev
         version: 4.3.0
       '@turbo/gen':
-        specifier: ^2.9.15
+        specifier: catalog:dev
         version: 2.9.15(@types/node@20.19.41)
       '@types/node':
-        specifier: ^20
+        specifier: catalog:dev
         version: 20.19.41
       '@types/react':
-        specifier: ^19
+        specifier: catalog:dev
         version: 19.2.15
       '@types/react-dom':
-        specifier: ^19
+        specifier: catalog:dev
         version: 19.2.3(@types/react@19.2.15)
       '@workspace/eslint-config':
         specifier: workspace:*
@@ -242,16 +311,16 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       eslint:
-        specifier: ^9
+        specifier: catalog:dev
         version: 9.39.4(jiti@2.7.0)
       prettier:
-        specifier: ^3.8.4
+        specifier: catalog:dev
         version: 3.8.4
       tailwindcss:
-        specifier: ^4
+        specifier: catalog:dev
         version: 4.3.0
       typescript:
-        specifier: ^5
+        specifier: catalog:dev
         version: 5.9.3
 
 packages:

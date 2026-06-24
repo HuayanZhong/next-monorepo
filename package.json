@@ -13,13 +13,13 @@
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
-    "husky": "^9.1.7",
+    "husky": "catalog:dev",
     "lint-staged": "^17.0.8",
-    "prettier": "^3.8.4",
+    "prettier": "catalog:dev",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "shadcn": "^4.11.0",
+    "shadcn": "catalog:dev",
     "turbo": "^2.9.18",
-    "typescript": "^5"
+    "typescript": "catalog:dev"
   },
   "lint-staged": {
     "*.{ts,tsx,mts}": [
