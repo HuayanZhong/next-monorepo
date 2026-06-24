@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Noto_Serif_SC } from "next/font/google"
 
+import { ModeToggle } from "@/components/common/mode-toggle"
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
@@ -111,7 +112,10 @@ export default function Page() {
       </aside>
 
       {/* 右侧登录表单区 */}
-      <main className="flex items-center justify-center bg-background p-6 sm:p-12">
+      <main className="relative flex items-center justify-center bg-background p-6 sm:p-12">
+        <div className="absolute top-6 right-6 sm:top-12 sm:right-12">
+          <ModeToggle />
+        </div>
         <div className="w-full max-w-sm animate-in space-y-8 duration-700 fade-in slide-in-from-bottom-8">
           {/* 移动端品牌 */}
           <div className="flex flex-col items-center gap-3 lg:hidden">
