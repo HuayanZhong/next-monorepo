@@ -28,12 +28,12 @@ function useBreadcrumb(): { group: string; page: string } | null {
       group: "客户管理",
       page: "外出登记",
     },
-    "/dashboard/customer-management/dietary-management": {
-      group: "客户管理",
+    "/dashboard/dietary-management/dietary": {
+      group: "膳食管理",
       page: "膳食管理",
     },
-    "/dashboard/customer-management/dietary-calendar": {
-      group: "客户管理",
+    "/dashboard/dietary-management/calendar": {
+      group: "膳食管理",
       page: "膳食日历",
     },
     "/dashboard/nursing-management/level": {

@@ -60,14 +60,19 @@ const navGroups: NavGroup[] = [
         href: "/dashboard/customer-management/go-out",
         icon: DoorIcon,
       },
+    ],
+  },
+  {
+    label: "膳食管理",
+    items: [
       {
         title: "膳食管理",
-        href: "/dashboard/customer-management/dietary-management",
+        href: "/dashboard/dietary-management/dietary",
         icon: Apple01Icon,
       },
       {
         title: "膳食日历",
-        href: "/dashboard/customer-management/dietary-calendar",
+        href: "/dashboard/dietary-management/calendar",
         icon: Calendar03Icon,
       },
     ],
