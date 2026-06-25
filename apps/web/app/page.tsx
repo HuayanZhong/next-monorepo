@@ -136,8 +136,8 @@ export default function Page() {
             </p>
           </div>
 
-          {/* 表单 */}
-          <form className="space-y-5">
+          {/* 表单（纯静态，暂无提交逻辑） */}
+          <div className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="username" className="text-foreground/80">
                 用户名
@@ -165,10 +165,10 @@ export default function Page() {
                 className="rounded-xl"
               />
             </div>
-            <Button type="submit" size="lg" className="w-full rounded-xl">
+            <Button size="lg" className="w-full rounded-xl">
               登录
             </Button>
-          </form>
+          </div>
 
           {/* 分隔线 */}
           <div className="flex items-center gap-4">
