@@ -19,7 +19,8 @@
     "next": "catalog:dev",
     "next-themes": "catalog:dev",
     "react": "catalog:dev",
-    "react-dom": "catalog:dev"
+    "react-dom": "catalog:dev",
+    "@workspace/types": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "catalog:dev",

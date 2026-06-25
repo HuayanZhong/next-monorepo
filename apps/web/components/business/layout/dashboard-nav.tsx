@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { HugeiconsIcon } from "@hugeicons/react"
-import type { IconSvgElement } from "@hugeicons/react"
 import {
   Home01Icon,
   UserMultiple02Icon,
@@ -16,6 +15,7 @@ import {
   DoorIcon,
   Logout01Icon,
 } from "@hugeicons/core-free-icons"
+import type { NavGroup } from "@workspace/types"
 
 import {
   SidebarGroup,
@@ -25,32 +25,6 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@workspace/ui/components/sidebar"
-
-/**
- * 侧边栏导航项定义
- * @author 花颜
- * @since 2026-06-25
- */
-interface NavItem {
-  /** 导航标题 */
-  title: string
-  /** 路由路径 */
-  href: string
-  /** hugeicons 图标 */
-  icon: IconSvgElement
-}
-
-/**
- * 侧边栏导航分组定义
- * @author 花颜
- * @since 2026-06-25
- */
-interface NavGroup {
-  /** 分组标签 */
-  label: string
-  /** 分组下的导航项 */
-  items: NavItem[]
-}
 
 /** 侧边栏导航配置 */
 const navGroups: NavGroup[] = [

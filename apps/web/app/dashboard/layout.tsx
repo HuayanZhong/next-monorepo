@@ -28,17 +28,22 @@ export default function DashboardLayout({
   return (
     <TooltipProvider>
       <SidebarProvider>
+        {/* 左侧可折叠侧边栏，支持 icon 折叠模式 */}
         <Sidebar collapsible="icon">
+          {/* 侧边栏顶部：颐养中心品牌标识 */}
           <SidebarHeader>
             <DashboardBrand />
           </SidebarHeader>
+          {/* 侧边栏中部：按业务模块分组的导航菜单 */}
           <SidebarContent>
             <DashboardNav />
           </SidebarContent>
+          {/* 侧边栏底部：当前用户信息与操作菜单 */}
           <SidebarFooter>
             <DashboardUserMenu />
           </SidebarFooter>
         </Sidebar>
+        {/* 右侧主内容区：顶部导航栏 + 页面内容 */}
         <SidebarInset className={notoSerif.variable}>
           <DashboardHeader />
           <div className="flex-1 p-4">{children}</div>
