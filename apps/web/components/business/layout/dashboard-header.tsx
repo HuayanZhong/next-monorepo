@@ -18,7 +18,7 @@ function useBreadcrumb(): { group: string; page: string } | null {
     },
     "/dashboard/customer-management/check-in": {
       group: "客户管理",
-      page: "客户入住",
+      page: "入住登记",
     },
     "/dashboard/customer-management/check-out": {
       group: "客户管理",

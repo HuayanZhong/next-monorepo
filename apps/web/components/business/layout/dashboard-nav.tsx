@@ -31,7 +31,7 @@ const navGroups: NavGroup[] = [
     label: "床位管理",
     items: [
       {
-        title: "床位一览",
+        title: "床位管理",
         href: "/dashboard/bed-management/bed",
         icon: BedSingle01Icon,
       },
@@ -46,12 +46,12 @@ const navGroups: NavGroup[] = [
     label: "客户管理",
     items: [
       {
-        title: "客户入住",
+        title: "入住登记",
         href: "/dashboard/customer-management/check-in",
         icon: DoorIcon,
       },
       {
-        title: "客户退房",
+        title: "退住登记",
         href: "/dashboard/customer-management/check-out",
         icon: Logout01Icon,
       },
@@ -61,29 +61,14 @@ const navGroups: NavGroup[] = [
         icon: DoorIcon,
       },
       {
-        title: "饮食管理",
+        title: "膳食管理",
         href: "/dashboard/customer-management/dietary-management",
         icon: Apple01Icon,
       },
       {
-        title: "饮食日历",
+        title: "膳食日历",
         href: "/dashboard/customer-management/dietary-calendar",
         icon: Calendar03Icon,
-      },
-    ],
-  },
-  {
-    label: "健康管理",
-    items: [
-      {
-        title: "服务对象",
-        href: "/dashboard/health-manager/subject",
-        icon: HeartCheckIcon,
-      },
-      {
-        title: "服务关注",
-        href: "/dashboard/health-manager/attention",
-        icon: HeartCheckIcon,
       },
     ],
   },
@@ -101,14 +86,29 @@ const navGroups: NavGroup[] = [
         icon: Stethoscope02Icon,
       },
       {
+        title: "客户护理设置",
+        href: "/dashboard/nursing-management/settings",
+        icon: Settings02Icon,
+      },
+      {
         title: "护理记录",
         href: "/dashboard/nursing-management/record",
         icon: Stethoscope02Icon,
       },
+    ],
+  },
+  {
+    label: "健康管理",
+    items: [
       {
-        title: "护理设置",
-        href: "/dashboard/nursing-management/settings",
-        icon: Settings02Icon,
+        title: "设置服务对象",
+        href: "/dashboard/health-manager/subject",
+        icon: HeartCheckIcon,
+      },
+      {
+        title: "服务关注",
+        href: "/dashboard/health-manager/attention",
+        icon: HeartCheckIcon,
       },
     ],
   },
@@ -116,7 +116,7 @@ const navGroups: NavGroup[] = [
     label: "用户管理",
     items: [
       {
-        title: "基本信息",
+        title: "基础数据维护",
         href: "/dashboard/user-management/basic-data",
         icon: UserMultiple02Icon,
       },
