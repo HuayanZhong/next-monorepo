@@ -9,3 +9,5 @@ export {
   type LoginResponse,
   type RefreshTokenResponse,
 } from "./auth"
+
+export type { NavItem, NavGroup } from "./dashboard"
