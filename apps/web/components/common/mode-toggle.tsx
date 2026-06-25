@@ -7,6 +7,11 @@ import { Moon02Icon, Sun02Icon } from "@hugeicons/core-free-icons"
 
 import { Button } from "@workspace/ui/components/button"
 
+/**
+ * 日/夜间模式切换按钮，点击在 light/dark 间切换
+ * @author 花颜
+ * @since 2026-06-25
+ */
 function ModeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
   const isDark = resolvedTheme === "dark"

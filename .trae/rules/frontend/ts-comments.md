@@ -1,7 +1,7 @@
 ---
 alwaysApply: false
 scene: frontend
-description: JSDoc 注释规范。涵盖函数、Hooks、组件的注释格式要求，保持简洁清晰。适用于编写或修改代码时的注释规范。
+description: 新增函数、Hook、组件、interface、type 时，必须添加 JSDoc 注释（含功能说明、@author、@since）。仅修改实现逻辑或修复 bug 时不需要。适用于创建或修改 React 组件、Hooks、工具函数、类型定义。
 ---
 
 ## 注释规范

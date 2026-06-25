@@ -5,6 +5,9 @@ import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
 
+/**
+ * 中文展示字体：Noto Serif SC
+ */
 const notoSerif = Noto_Serif_SC({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
@@ -12,6 +15,9 @@ const notoSerif = Noto_Serif_SC({
   preload: false,
 })
 
+/**
+ * 英文展示字体：Cormorant Garamond
+ */
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
@@ -19,6 +25,11 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
 })
 
+/**
+ * 东软颐养中心登录页，左侧品牌展示 + 右侧登录表单
+ * @author 花颜
+ * @since 2026-06-25
+ */
 export default function Page() {
   return (
     <div
