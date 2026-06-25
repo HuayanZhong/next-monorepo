@@ -1,8 +1,6 @@
 import { cormorant, notoSerif } from "@/assets/fonts"
 import { ModeToggle } from "@/components/common/mode-toggle"
-import { Button } from "@workspace/ui/components/button"
-import { Input } from "@workspace/ui/components/input"
-import { Label } from "@workspace/ui/components/label"
+import { LoginForm } from "@/components/business/auth/login-form"
 
 /**
  * 东软颐养中心登录页，左侧品牌展示 + 右侧登录表单
@@ -136,39 +134,8 @@ export default function Page() {
             </p>
           </div>
 
-          {/* 表单（纯静态，暂无提交逻辑） */}
-          <div className="space-y-5">
-            <div className="space-y-2">
-              <Label htmlFor="username" className="text-foreground/80">
-                用户名
-              </Label>
-              <Input
-                id="username"
-                name="username"
-                placeholder="请输入用户名"
-                autoComplete="username"
-                required
-                className="rounded-xl"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="password" className="text-foreground/80">
-                密码
-              </Label>
-              <Input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="请输入密码"
-                autoComplete="current-password"
-                required
-                className="rounded-xl"
-              />
-            </div>
-            <Button size="lg" className="w-full rounded-xl">
-              登录
-            </Button>
-          </div>
+          {/* 表单 */}
+          <LoginForm />
 
           {/* 分隔线 */}
           <div className="flex items-center gap-4">
