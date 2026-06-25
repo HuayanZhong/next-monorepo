@@ -1,29 +1,8 @@
-import { Cormorant_Garamond, Noto_Serif_SC } from "next/font/google"
-
+import { cormorant, notoSerif } from "@/assets/fonts"
 import { ModeToggle } from "@/components/common/mode-toggle"
 import { Button } from "@workspace/ui/components/button"
 import { Input } from "@workspace/ui/components/input"
 import { Label } from "@workspace/ui/components/label"
-
-/**
- * 中文展示字体：Noto Serif SC
- */
-const notoSerif = Noto_Serif_SC({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-serif-sc",
-  preload: false,
-})
-
-/**
- * 英文展示字体：Cormorant Garamond
- */
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-})
 
 /**
  * 东软颐养中心登录页，左侧品牌展示 + 右侧登录表单

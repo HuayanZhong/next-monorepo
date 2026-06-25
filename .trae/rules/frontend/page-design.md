@@ -16,8 +16,11 @@ description: 页面级 UI 设计规范。涵盖设计调性、字体配对、装
 
 - 中文展示字用衬线体（如 Noto Serif SC），英文展示字用配套衬线体（如 Cormorant Garamond）
 - 正文仍用 `font-sans`（Geist），不替换全局字体
-- 展示字体通过 `next/font/google` 加载为 CSS variable，仅在需要的元素上用 `style={{ fontFamily: "var(--font-xxx)" }}` 引用
-- 字体声明放在使用它的页面文件顶部，不污染全局 layout
+- 展示字体统一在 `assets/fonts` 管理，页面按需引入
+  ```tsx
+  import { notoSerif, cormorant } from "@/assets/fonts"
+  ```
+- 需要的元素上用 `style={{ fontFamily: "var(--font-xxx)" }}` 引用，不污染全局 layout
 
 ## 装饰元素也必须用语义变量
 
