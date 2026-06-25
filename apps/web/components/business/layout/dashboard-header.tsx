@@ -64,6 +64,22 @@ function useBreadcrumb(): { group: string; page: string } | null {
       group: "用户管理",
       page: "基础数据维护",
     },
+    "/dashboard/caregiver/health-housekeeper/daily-care": {
+      group: "健康管家",
+      page: "日常护理",
+    },
+    "/dashboard/caregiver/health-housekeeper/care-records": {
+      group: "健康管家",
+      page: "服务对象护理记录",
+    },
+    "/dashboard/caregiver/customer-management/leave-request": {
+      group: "客户管理",
+      page: "外出申请",
+    },
+    "/dashboard/caregiver/customer-management/checkout-request": {
+      group: "客户管理",
+      page: "退住申请",
+    },
   }
   return routeMap[pathname] ?? null
 }

@@ -13,6 +13,8 @@ import {
   Apple01Icon,
   DoorIcon,
   Logout01Icon,
+  ClipboardCheckIcon,
+  MedicalFileIcon,
 } from "@hugeicons/core-free-icons"
 import type { NavGroup } from "@workspace/types"
 
@@ -25,8 +27,8 @@ import {
   SidebarMenuButton,
 } from "@workspace/ui/components/sidebar"
 
-/** 侧边栏导航配置 */
-const navGroups: NavGroup[] = [
+/** 管理员侧边栏导航配置 */
+const adminNavGroups: NavGroup[] = [
   {
     label: "床位管理",
     items: [
@@ -129,13 +131,50 @@ const navGroups: NavGroup[] = [
   },
 ]
 
+/** 护工侧边栏导航配置 */
+const caregiverNavGroups: NavGroup[] = [
+  {
+    label: "健康管家",
+    items: [
+      {
+        title: "日常护理",
+        href: "/dashboard/caregiver/health-housekeeper/daily-care",
+        icon: ClipboardCheckIcon,
+      },
+      {
+        title: "服务对象护理记录",
+        href: "/dashboard/caregiver/health-housekeeper/care-records",
+        icon: MedicalFileIcon,
+      },
+    ],
+  },
+  {
+    label: "客户管理",
+    items: [
+      {
+        title: "外出申请",
+        href: "/dashboard/caregiver/customer-management/leave-request",
+        icon: DoorIcon,
+      },
+      {
+        title: "退住申请",
+        href: "/dashboard/caregiver/customer-management/checkout-request",
+        icon: Logout01Icon,
+      },
+    ],
+  },
+]
+
 /**
- * 侧边栏导航菜单，根据当前路径高亮活跃项
+ * 侧边栏导航菜单
+ * 根据当前路径判断角色：护工路由在 /dashboard/caregiver/ 下，其余为管理员
  * @author 花颜
  * @since 2026-06-25
  */
 export function DashboardNav() {
   const pathname = usePathname()
+  const isCaregiver = pathname.startsWith("/dashboard/caregiver")
+  const navGroups = isCaregiver ? caregiverNavGroups : adminNavGroups
 
   return (
     <>
