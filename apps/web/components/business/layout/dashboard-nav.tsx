@@ -4,7 +4,6 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { HugeiconsIcon } from "@hugeicons/react"
 import {
-  Home01Icon,
   UserMultiple02Icon,
   BedSingle01Icon,
   HeartCheckIcon,
@@ -28,10 +27,6 @@ import {
 
 /** 侧边栏导航配置 */
 const navGroups: NavGroup[] = [
-  {
-    label: "概览",
-    items: [{ title: "控制台", href: "/dashboard", icon: Home01Icon }],
-  },
   {
     label: "床位管理",
     items: [
