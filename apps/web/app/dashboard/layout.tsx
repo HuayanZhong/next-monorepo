@@ -1,4 +1,4 @@
-import { notoSerif } from "@/assets/fonts"
+import { notoSerif, cormorant } from "@/assets/fonts"
 import { TooltipProvider } from "@workspace/ui/components/tooltip"
 import {
   SidebarProvider,
@@ -44,9 +44,11 @@ export default function DashboardLayout({
           </SidebarFooter>
         </Sidebar>
         {/* 右侧主内容区：顶部导航栏 + 页面内容 */}
-        <SidebarInset className={notoSerif.variable}>
+        <SidebarInset className={`${notoSerif.variable} ${cormorant.variable}`}>
           <DashboardHeader />
-          <div className="flex-1 p-4">{children}</div>
+          <div className="flex-1 animate-in p-6 duration-500 fade-in">
+            {children}
+          </div>
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>
