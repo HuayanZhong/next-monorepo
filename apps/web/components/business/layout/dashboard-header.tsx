@@ -11,7 +11,7 @@ function useBreadcrumb(): { group: string; page: string } | null {
   const pathname = usePathname()
   // navGroups 在 dashboard-nav 中定义，这里用静态映射避免循环依赖
   const routeMap: Record<string, { group: string; page: string }> = {
-    "/dashboard/bed-management/bed": { group: "床位管理", page: "床位一览" },
+    "/dashboard/bed-management/bed": { group: "床位管理", page: "床位管理" },
     "/dashboard/bed-management/illustration": {
       group: "床位管理",
       page: "床位示意图",
@@ -22,7 +22,7 @@ function useBreadcrumb(): { group: string; page: string } | null {
     },
     "/dashboard/customer-management/check-out": {
       group: "客户管理",
-      page: "客户退房",
+      page: "退住登记",
     },
     "/dashboard/customer-management/go-out": {
       group: "客户管理",
@@ -30,19 +30,11 @@ function useBreadcrumb(): { group: string; page: string } | null {
     },
     "/dashboard/customer-management/dietary-management": {
       group: "客户管理",
-      page: "饮食管理",
+      page: "膳食管理",
     },
     "/dashboard/customer-management/dietary-calendar": {
       group: "客户管理",
-      page: "饮食日历",
-    },
-    "/dashboard/health-manager/subject": {
-      group: "健康管理",
-      page: "服务对象",
-    },
-    "/dashboard/health-manager/attention": {
-      group: "健康管理",
-      page: "服务关注",
+      page: "膳食日历",
     },
     "/dashboard/nursing-management/level": {
       group: "护理管理",
@@ -52,17 +44,25 @@ function useBreadcrumb(): { group: string; page: string } | null {
       group: "护理管理",
       page: "护理项目",
     },
+    "/dashboard/nursing-management/settings": {
+      group: "护理管理",
+      page: "客户护理设置",
+    },
     "/dashboard/nursing-management/record": {
       group: "护理管理",
       page: "护理记录",
     },
-    "/dashboard/nursing-management/settings": {
-      group: "护理管理",
-      page: "护理设置",
+    "/dashboard/health-manager/subject": {
+      group: "健康管理",
+      page: "设置服务对象",
+    },
+    "/dashboard/health-manager/attention": {
+      group: "健康管理",
+      page: "服务关注",
     },
     "/dashboard/user-management/basic-data": {
       group: "用户管理",
-      page: "基本信息",
+      page: "基础数据维护",
     },
   }
   return routeMap[pathname] ?? null
