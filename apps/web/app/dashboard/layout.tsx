@@ -46,9 +46,7 @@ export default function DashboardLayout({
         {/* 右侧主内容区：顶部导航栏 + 页面内容 */}
         <SidebarInset className={`${notoSerif.variable} ${cormorant.variable}`}>
           <DashboardHeader />
-          <div className="flex-1 animate-in p-6 duration-500 fade-in">
-            {children}
-          </div>
+          <div className="flex-1 p-6">{children}</div>
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>
